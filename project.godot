@@ -9,6 +9,31 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "HBoxContainer",
+"class": "ContributorClass",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/ContributorClass.gd"
+}, {
+"base": "PanelContainer",
+"class": "GistItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/GistItem.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "HBoxContainer",
+"class": "InvitationItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/InvitationItem.gd"
+}, {
+"base": "PanelContainer",
+"class": "RepositoryItem",
+"language": "GDScript",
+"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
+}, {
 "base": "Reference",
 "class": "SceneData",
 "language": "GDScript",
@@ -25,6 +50,11 @@ _global_script_classes=[ {
 "path": "res://addons/game-template/transition/transition.gd"
 } ]
 _global_script_class_icons={
+"ContributorClass": "",
+"GistItem": "",
+"GitAPI": "",
+"InvitationItem": "",
+"RepositoryItem": "",
 "SceneData": "",
 "Scenes": "",
 "Transition": ""
@@ -32,8 +62,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="godot-game-template"
+config/name="MedicoTechnoHacks"
 run/main_scene="res://scenes/menu/menu.tscn"
+boot_splash/show_image=false
 boot_splash/image="res://assets/splash.png"
 boot_splash/bg_color=Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 config/icon="res://assets/sprites/icon.png"
@@ -44,6 +75,10 @@ config/version="0.0.1"
 Game="*res://addons/game-template/game.gd"
 Transitions="*res://addons/game-template/transition/transition.tscn"
 Utils="*res://addons/game-template/utils.gd"
+PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 [category]
 
@@ -55,9 +90,19 @@ window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
+
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/game-template/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/game-template/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/ui_design_tool/plugin.cfg" )
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+singletons_disabled=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
 
 [input]
 
