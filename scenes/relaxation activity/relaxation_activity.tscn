@@ -22,23 +22,23 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 913.0
+margin_top = 874.0
 margin_right = 1080.0
-margin_bottom = 941.0
+margin_bottom = 929.0
 text = "do something"
 align = 1
 valign = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 957.0
+margin_top = 945.0
 margin_right = 1080.0
-margin_bottom = 1007.0
+margin_bottom = 1045.0
 
 [node name="Button" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_left = 480.0
-margin_right = 600.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 120, 50 )
+margin_left = 420.0
+margin_right = 660.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 240, 100 )
 text = "done"
 
 [node name="borgar" parent="." instance=ExtResource( 3 )]
