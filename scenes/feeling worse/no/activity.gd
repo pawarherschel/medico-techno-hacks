@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -16,22 +16,8 @@ func _ready():
 #	pass
 
 
-func _on_yes_pressed():
-	var params = {
-		show_progress_bar = true,
-	}
-	Game.change_scene("res://scenes/relaxation activity/relaxation_activity.gd", params)
-
-
-func _on_no_pressed():
-	var params = {
-		show_progress_bar = true,
-	}
-	Game.change_scene("res://scenes/menu/menu.tscn", params)
-
-
 func _on_activity_pressed():
 	var params = {
 		show_progress_bar = true,
 	}
-	Game.change_scene("res://scenes/menu/menu.tscn", params)
+	Game.change_scene("res://scenes/relaxation activity/relaxation_activity.tscn", params)

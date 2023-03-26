@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/footer/footer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/relaxation activity/menu.gd" type="Script" id=2]
 [ext_resource path="res://scenes/feeling worse/yes/yes.gd" type="Script" id=3]
+[ext_resource path="res://scenes/feeling worse/no/activity.gd" type="Script" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -22,26 +23,39 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 829.0
+margin_top = 761.0
 margin_right = 1080.0
-margin_bottom = 884.0
+margin_bottom = 816.0
 text = "Please contact the phone number below"
 align = 1
 valign = 1
 autowrap = true
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 900.0
+margin_top = 832.0
 margin_right = 1080.0
-margin_bottom = 955.0
+margin_bottom = 887.0
 align = 1
 valign = 1
 autowrap = true
 
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 971.0
+[node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 903.0
 margin_right = 1080.0
-margin_bottom = 1091.0
+margin_bottom = 1023.0
+
+[node name="activity" type="Button" parent="VBoxContainer/CenterContainer4"]
+margin_left = 365.0
+margin_right = 715.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 350, 120 )
+text = "Go to Activity"
+script = ExtResource( 4 )
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 1039.0
+margin_right = 1080.0
+margin_bottom = 1159.0
 
 [node name="menu" type="Button" parent="VBoxContainer/CenterContainer2"]
 margin_left = 365.0
@@ -51,4 +65,5 @@ rect_min_size = Vector2( 350, 120 )
 text = "Go to Menu"
 script = ExtResource( 2 )
 
+[connection signal="pressed" from="VBoxContainer/CenterContainer4/activity" to="VBoxContainer/CenterContainer4/activity" method="_on_activity_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer2/menu" to="VBoxContainer/CenterContainer2/menu" method="_on_menu_pressed"]
