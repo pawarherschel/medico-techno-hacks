@@ -84,20 +84,18 @@ __meta__ = {
 [node name="Version" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = -90.0
-margin_right = 198.0
-margin_bottom = -18.0
+margin_top = -126.0
+margin_right = 376.0
 
 [node name="GameVersion" type="Label" parent="Version"]
-margin_right = 188.0
-margin_bottom = 28.0
+margin_right = 376.0
+margin_bottom = 55.0
 text = "<x.y.z>"
 
 [node name="GodotVersion" type="Label" parent="Version"]
-margin_top = 44.0
-margin_right = 188.0
-margin_bottom = 72.0
+margin_top = 71.0
+margin_right = 376.0
+margin_bottom = 126.0
 custom_colors/font_color = Color( 0.92549, 0.92549, 0.92549, 1 )
 text = "<GodotVersion>"
 script = SubResource( 1 )
@@ -115,24 +113,24 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="MadeByLabel" type="Label" parent="Credits"]
-margin_right = 131.0
-margin_bottom = 28.0
+margin_right = 216.0
+margin_bottom = 55.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "made by:"
 
 [node name="Developer1" type="Label" parent="Credits"]
-margin_top = 44.0
-margin_right = 131.0
-margin_bottom = 72.0
+margin_top = 71.0
+margin_right = 216.0
+margin_bottom = 126.0
 grow_horizontal = 0
 custom_colors/font_color = Color( 0.92549, 0.92549, 0.92549, 1 )
 text = "GROUP 5"
 
 [node name="Developer2" type="Label" parent="Credits"]
 visible = false
-margin_top = 86.0
-margin_right = 157.0
-margin_bottom = 125.0
+margin_top = 142.0
+margin_right = 279.0
+margin_bottom = 197.0
 grow_horizontal = 0
 custom_colors/font_color = Color( 0.886275, 0.87451, 0.87451, 1 )
 text = "Developer 2"

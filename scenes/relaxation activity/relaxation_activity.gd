@@ -8,7 +8,16 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if Singleton.hobby == "dance":
+		$VBoxContainer/Label.text = Singleton.get_dance()
+	elif Singleton.hobby == "music":
+		$VBoxContainer/Label.text = Singleton.get_music()
+	elif Singleton.hobby == "art":
+		$VBoxContainer/Label.text = Singleton.get_art()
+	elif Singleton.hobby == "other":
+		$VBoxContainer/Label.text = Singleton.get_other()
+	else:
+		$VBoxContainer/Label.text = Singleton.get_mix()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

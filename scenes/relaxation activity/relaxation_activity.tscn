@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/footer/footer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/relaxation activity/relaxation_activity.gd" type="Script" id=2]
-[ext_resource path="res://scenes/borgar/borgar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/relaxation activity/menu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/relaxation activity/profile.gd" type="Script" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -22,17 +23,18 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 874.0
+margin_top = 738.0
 margin_right = 1080.0
-margin_bottom = 929.0
+margin_bottom = 793.0
 text = "do something"
 align = 1
 valign = 1
+autowrap = true
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 945.0
+margin_top = 809.0
 margin_right = 1080.0
-margin_bottom = 1045.0
+margin_bottom = 909.0
 
 [node name="Button" type="Button" parent="VBoxContainer/CenterContainer"]
 margin_left = 420.0
@@ -41,6 +43,32 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 240, 100 )
 text = "done"
 
-[node name="borgar" parent="." instance=ExtResource( 3 )]
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 925.0
+margin_right = 1080.0
+margin_bottom = 1045.0
+
+[node name="menu" type="Button" parent="VBoxContainer/CenterContainer2"]
+margin_left = 365.0
+margin_right = 715.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 350, 120 )
+text = "Go to Menu"
+script = ExtResource( 3 )
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 1061.0
+margin_right = 1080.0
+margin_bottom = 1181.0
+
+[node name="profile" type="Button" parent="VBoxContainer/CenterContainer3"]
+margin_left = 365.0
+margin_right = 715.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 350, 120 )
+text = "Go to Profile"
+script = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/menu" to="VBoxContainer/CenterContainer2/menu" method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer3/profile" to="VBoxContainer/CenterContainer3/profile" method="_on_profile_pressed"]
