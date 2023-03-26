@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/logos/IIC.png" type="Texture" id=1]
+[ext_resource path="res://assets/logos/MICE.png" type="Texture" id=2]
+[ext_resource path="res://assets/logos/mgm.png" type="Texture" id=3]
+[ext_resource path="res://scenes/footer/footer.gd" type="Script" id=4]
+[ext_resource path="res://scenes/borgar/borgar.tscn" type="PackedScene" id=5]
+
+[node name="footer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
+alignment = 1
+
+[node name="mgm" type="TextureRect" parent="HBoxContainer"]
+margin_left = 309.0
+margin_right = 407.0
+margin_bottom = 100.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="iic" type="TextureRect" parent="HBoxContainer"]
+margin_left = 423.0
+margin_right = 654.0
+margin_bottom = 100.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="mice" type="TextureRect" parent="HBoxContainer"]
+margin_left = 670.0
+margin_right = 771.0
+margin_bottom = 100.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="borgar" parent="." instance=ExtResource( 5 )]
