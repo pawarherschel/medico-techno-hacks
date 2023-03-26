@@ -76,5 +76,6 @@ margin_bottom = 120.0
 rect_min_size = Vector2( 350, 120 )
 text = "Go back"
 
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer2/menu" to="VBoxContainer/CenterContainer2/menu" method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer3/back" to="." method="_on_back_pressed"]
